@@ -16,5 +16,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <div id="overlay"></div>
+    <div id="myDialog">
+        <p>HAIIII Selamat pagiii ini merupakan tugas dialog menggunakan button</p>
+        <button onclick="closeDialog()">Tutup</button>
+    </div>
+    <div id="myDialog2">
+        <p>Terimakasiii, maaf kak kalau salah </p>
+        <button onclick="closeDialog('myDialog2')">Tutup</button>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan dialog
+        function showDialog() {
+            document.getElementById('myDialog').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Fungsi untuk menutup dialog
+        function closeDialog() {
+            document.getElementById('myDialog').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Menampilkan dialog saat halaman pertama kali dimuat
+        window.onload = function() {
+            showDialog();
+        }
+    </script>
+
 </body>
 </html>
